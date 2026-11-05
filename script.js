@@ -4,7 +4,7 @@ const btnCadastrar = document.getElementById("btnCadastrar")
 const btnCancelar = document.getElementById("btnCancelar")
 const modal = document.getElementById("modalCadastro")
 const form = document.getElementById("formJogo")
-const lista = document.getElementById("listarJogos")
+const lista = document.getElementById("listarjogos")
 const mensagemVazia = document.getElementById("mensagemVazia")
 
 btnCadastrar.addEventListener("click", ()=>{
@@ -31,7 +31,7 @@ async function carregarJogos(){
 
         mensagemVazia.hidden = true
         //Renderize os jogos encontrados
-        jogos.forEach(jogo=>{
+        jogos.forEach(jogo => {
             criarCard(jogo.titulo, jogo.plataforma, jogo.desenvolvedora, jogo.imagem, jogo.preco)
         })
     } catch (erro) {
